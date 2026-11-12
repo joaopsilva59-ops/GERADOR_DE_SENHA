@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Gerador de Senhas</h1>
+        <p class="descricao">
+            Crie senhas aleatórias e personalizadas.
+        </p>
+
+        <div class="senha-container">
+            <input
+                type="password"
+                id="senha"
+                placeholder="Sua senha aparecerá aqui"
+                readonly
+            >
+
+            <button id="mostrar" class="botao-icone">
+                Mostrar
+            </button>
+        </div>
+
+        <div class="campo">
+            <label for="tamanho">Tamanho da senha:</label>
+            <input
+                type="number"
+                id="tamanho"
+                min="1"
+                max="128"
+                value="12"
+            >
+        </div>
+
+        <h3>Tipos de caracteres</h3>
+
+        <div class="opcoes">
+
+            <label>
+                <input type="checkbox" id="maiusculas" checked>
+                Letras maiúsculas (A-Z)
+            </label>
+
+            <label>
+                <input type="checkbox" id="minusculas" checked>
+                Letras minúsculas (a-z)
+            </label>
+
+            <label>
+                <input type="checkbox" id="numeros" checked>
+                Números (0-9)
+            </label>
+
+            <label>
+                <input type="checkbox" id="especiais">
+                Caracteres especiais (!@#$%)
+            </label>
+
+        </div>
+
+        <div class="botoes">
+
+            <button id="gerar" class="botao-gerar">
+                Gerar senha
+            </button>
+
+            <button id="copiar" class="botao-copiar">
+                Copiar senha
+            </button>
+
+            <button id="limpar" class="botao-limpar">
+                Limpar
+            </button>
+
+        </div>
+
+        <p id="mensagem"></p>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
